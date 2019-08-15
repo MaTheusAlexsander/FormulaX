@@ -14,6 +14,8 @@
 
 Na interface no Qt podemos manipular as funções do programa. Primeiramente, é necessário identificar a porta serial disponível para o acesso, somente depois de escolher a porta que conecta ao circuito o programa liberará ao usuário todas as outras funções, mas o usuário só terá acesso se a porta escolhida conectar com o circuito, caso não ocorra as outras funções permanecem bloqueadas.
 
+![QT_PORTA](figuras/porta_qt.PNG)
+
 
 
 #### Interface na Web
