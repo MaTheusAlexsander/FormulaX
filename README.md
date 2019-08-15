@@ -47,7 +47,7 @@ Pronto! Após estabelecermos a comunicação, o usuário pode definir o tempo qu
 
 #### Materiais
 
-- NODEMCU
+- NODEMCU [ESP8266](https://cdn-shop.adafruit.com/product-files/2471/0A-ESP8266__Datasheet__EN_v4.3.pdf)
 - Sensor Infravermelho(3 receptor e 3 emissor)
 - Protoboard
 - 6 resistores de 220, 3 de 1k e 3 de 10k
