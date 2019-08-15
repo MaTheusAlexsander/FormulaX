@@ -8,18 +8,25 @@
 
 ## Sumário
 
-- [Introdução](#introdução)
+- [Objetivo](#objetivo)
 - [Manual do Usuário](#manual-do-usu%C3%A1rio)
+- [Como funciona o FormulaX?](#como-funciona-o-formulax)
 - [Interface no QT](#interface-no-qt)
 - [Interface na Web](#interface-na-web)
 - [Informações Técnicas](#informa%C3%A7%C3%B5es-t%C3%A9cnicas)
 - [Materiais](#materiais)
 - [Circuito](#circuito)
 
-## Introdução
+## Objetivo
 <p>O FormulaX é um sistema de monitoriamento da performance com iluminação inteligente. Nesse protópio o usuário poderá analisar a sua perfomace através da análise dos dados gerados a partir de sensor de infravermelho.</p>
 
 ## Manual do Usuário
+
+#### Como funciona o FormulaX?
+
+O FormulaX tem como ideia principal um monitoramente dados da performance de um piloto, constintindo em uma melhor análise do seu desempenho e buscando o aperfeiçoamento do mesmo. O FormulaX tem a finalidade da obtenção dos dados, aonde esses dados são monitorados e melhor avaliado por uma equipe técnica.
+Para facilitar a obtenção dos dados foi desenvolvido junto com o protótipo uma interface QT e uma interface WEB.
+
 
 #### Interface no QT
 
@@ -43,9 +50,7 @@ Pronto! Após estabelecermos a comunicação, o usuário pode definir o tempo qu
 
 #### Interface na Web
 
-O [site](https://formulax.herokuapp.com) do FormulaX permite que o usuário tenha acesso ao sistema de monitoramente, necessitando apenas de uma conexão com a web.
-
-Esta página web está hospedada no Heroku, uma plataforma cloud que permite o deploy de aplicações para desenvolvedores. Aqui, foi utilizado HTML e CSS, para poder organizar o site, além de JavaScript e Python, para reagir à eventos e fazer a comunicação com o software para computador e para a ESP8266. É notável indicar a importância da biblioteca Flask feita pela comunidade do Python, que é bastante crítica para a realização da comunicação e o deploy do servidor.
+O [site](https://formulax.herokuapp.com) do FormulaX permite que o usuário tenha acesso ao sistema de monitoramente, necessitando apenas de uma conexão com a web. Esta página web está hospedada no Heroku, uma plataforma cloud que permite o deploy de aplicações para desenvolvedores. 
 
 ## Informações Técnicas
 
@@ -59,6 +64,8 @@ Esta página web está hospedada no Heroku, uma plataforma cloud que permite o d
 ##### Circuito
 
 ![circuito](figuras/circuito.jpeg)
+
+
 
 INTERRUPÇÃO
 
