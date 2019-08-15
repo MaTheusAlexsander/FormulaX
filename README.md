@@ -56,6 +56,15 @@ Pronto! Após estabelecermos a comunicação, o usuário pode definir o tempo qu
 
 ![circuito](figuras/circuito.jpeg)
 
+INTERRUPÇÃO
+
+<p>Utilizar interrupções significa definir um pino para detectar pulsos de tensão. Em nosso circuito utilizamos o parâmetro RISING pois ao interromper o IR(infrared) ocorre um pico de tensão.</p>
+<p>Existem alguma peculiaridades no nodemcu para serem configuradas com o objetivo de fazer o pino de interrupção funcionar corretamente:</p>
+<p>-Definir a versão da esp8266 para 2.5.0 pois as versões mais atualzadas não funcionam com as funções de interrupção;</p>
+<p>-Utilizar as funcões attachInterrupt() e digitalPinToInterrupt() assim como definir o pino como INPUT_PULL UP, colocar o prefixo ICACHE_RAM_ATTR ao declarar a função de interrupção (Ex.: void ICACHE_RAM_ATTR interrupt()) e declarar qualquer variável utilizada na interrupção como volatile;</p>
+<p>-ICACHE_RAM_ATTR serve para fazer a função rodar na RAM e volatile para assegurar o valor da variável caso utilize interrupções muito rápidas;</p>
+<p>-Se utilizar dos pinos D0 a D7 ligar o pino a um resistor(de preferência com uma resistencia alta, como 10kOhms), o resistor ligar no terra e sua interrupção ligar no ponto pino-resistor, pois os pinos quando setados como INPUT_PULLUP e digitalPinToInterrupt() ficam em nivél alto o tempo todo;</p>
+
 
 
 
