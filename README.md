@@ -20,6 +20,10 @@ Após configuramos a porta serial COM3, se faz necessário escolher a velocidade
 
 ![QT_VELOCIDADE](figuras/velocidade_qt.png)
 
+Para estabelecer a conexão é necessário que os passos anteriores estejam corretamente executados.
+
+![qt_conexao](figuras/conexao_qt.png)
+
 
 
 #### Interface na Web
