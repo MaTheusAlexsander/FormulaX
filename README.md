@@ -35,6 +35,10 @@ Para estabelecer a conexão é necessário que os passos anteriores estejam corr
 
 ![qt_conexao](figuras/conexao_qt.png)
 
+Pronto! Após estabelecermos a comunicação, o usuário pode definir o tempo que em o led ficar acesso após a atuação do infravermelho, como também liga-lo e desliga-lo no tempo que jugar necessário.
+
+![qt_led](figuras/LED_QT.png)
+
 
 
 #### Interface na Web
@@ -45,7 +49,7 @@ Para estabelecer a conexão é necessário que os passos anteriores estejam corr
 
 - NODEMCU
 - Sensor Infravermelho(3 receptor e 3 emissor)
--protoboard
+- Protoboard
 - 6 resistores de 220, 3 de 1k e 3 de 10k
 
 ###### Circuito
