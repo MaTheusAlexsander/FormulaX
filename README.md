@@ -52,6 +52,8 @@ Pronto! Após estabelecermos a comunicação, o usuário pode definir o tempo qu
 
 O [site](https://formulax.herokuapp.com) do FormulaX permite que o usuário tenha acesso ao sistema de monitoramente, necessitando apenas de uma conexão com a web. Esta página web está hospedada no Heroku, uma plataforma cloud que permite o deploy de aplicações para desenvolvedores. 
 
+![site](figuras/site.jpeg)
+
 ## Informações Técnicas
 
 #### Materiais
