@@ -43,37 +43,31 @@ Pronto! Após estabelecermos a comunicação, o usuário pode definir o tempo qu
 
 #### Interface na Web
 
+O [site](https://formulax.herokuapp.com) do FormulaX permite que o usuário tenha acesso ao sistema de monitoramente, necessitando apenas de uma conexão com a web.
+
+Esta página web está hospedada no Heroku, uma plataforma cloud que permite o deploy de aplicações para desenvolvedores. Aqui, foi utilizado HTML e CSS, para poder organizar o site, além de JavaScript e Python, para reagir à eventos e fazer a comunicação com o software para computador e para a ESP8266. É notável indicar a importância da biblioteca Flask feita pela comunidade do Python, que é bastante crítica para a realização da comunicação e o deploy do servidor.
+
 ## Informações Técnicas
 
 #### Materiais
 
-- NODEMCU [ESP8266](https://cdn-shop.adafruit.com/product-files/2471/0A-ESP8266__Datasheet__EN_v4.3.pdf)
-- Sensor Infravermelho(3 receptor e 3 emissor)
+- NodeMCU [ESP8266](https://cdn-shop.adafruit.com/product-files/2471/0A-ESP8266__Datasheet__EN_v4.3.pdf)
+- Sensor Infravermelho (3 receptor e 3 emissor)
 - Protoboard
-- 6 resistores de 220, 3 de 1k e 3 de 10k
+- 6 resistores de 220(Ohms), 3 de 1k(Ohms) e 3 de 10k(Ohms).
 
-###### Circuito
+##### Circuito
 
 ![circuito](figuras/circuito.jpeg)
 
 INTERRUPÇÃO
 
 <p>Utilizar interrupções significa definir um pino para detectar pulsos de tensão. Em nosso circuito utilizamos o parâmetro RISING pois ao interromper o IR(infrared) ocorre um pico de tensão.</p>
-<p>Existem alguma peculiaridades no nodemcu para serem configuradas com o objetivo de fazer o pino de interrupção funcionar corretamente:</p>
-<p>-Definir a versão da esp8266 para 2.5.0 pois as versões mais atualzadas não funcionam com as funções de interrupção;</p>
+<p>Existem alguma peculiaridades no NodeMCU para serem configuradas com o objetivo de fazer o pino de interrupção funcionar corretamente:</p>
+<p>-Definir a versão da ESP8266 para 2.5.0 pois as versões mais atualizadas não funcionam com as funções de interrupção;</p>
 <p>-Utilizar as funcões attachInterrupt() e digitalPinToInterrupt() assim como definir o pino como INPUT_PULL UP, colocar o prefixo ICACHE_RAM_ATTR ao declarar a função de interrupção (Ex.: void ICACHE_RAM_ATTR interrupt()) e declarar qualquer variável utilizada na interrupção como volatile;</p>
 <p>-ICACHE_RAM_ATTR serve para fazer a função rodar na RAM e volatile para assegurar o valor da variável caso utilize interrupções muito rápidas;</p>
-<p>-Se utilizar dos pinos D0 a D7 ligar o pino a um resistor(de preferência com uma resistencia alta, como 10kOhms), o resistor ligar no terra e sua interrupção ligar no ponto pino-resistor, pois os pinos quando setados como INPUT_PULLUP e digitalPinToInterrupt() ficam em nivél alto o tempo todo;</p>
-
-
-
-
-
-
-
-  
- 
-
+<p>-Se utilizar dos pinos D0 a D7 ligar o pino a um resistor(de preferência com uma resistencia alta, como 10kOhms), o resistor ligar no terra e sua interrupção ligar no ponto pino-resistor, pois os pinos quando setados como INPUT_PULLUP e digitalPinToInterrupt() ficam em nivel alto o tempo todo;</p>
 
 
 
