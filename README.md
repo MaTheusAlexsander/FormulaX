@@ -1,5 +1,8 @@
 # FormulaX
 
+<p align="center">
+  <img src="figuras/logo.jpg?raw=true" alt="logo"/>
+</p>
 
 
 
