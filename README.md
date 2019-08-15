@@ -69,7 +69,7 @@ O [site](https://formulax.herokuapp.com) do FormulaX permite que o usuário tenh
 
 
 
-INTERRUPÇÃO
+##### Interrupção
 
 <p>Utilizar interrupções significa definir um pino para detectar pulsos de tensão. Em nosso circuito utilizamos o parâmetro RISING pois ao interromper o IR(infrared) ocorre um pico de tensão.</p>
 <p>Existem alguma peculiaridades no NodeMCU para serem configuradas com o objetivo de fazer o pino de interrupção funcionar corretamente:</p>
@@ -77,6 +77,13 @@ INTERRUPÇÃO
 <p>-Utilizar as funcões attachInterrupt() e digitalPinToInterrupt() assim como definir o pino como INPUT_PULL UP, colocar o prefixo ICACHE_RAM_ATTR ao declarar a função de interrupção (Ex.: void ICACHE_RAM_ATTR interrupt()) e declarar qualquer variável utilizada na interrupção como volatile;</p>
 <p>-ICACHE_RAM_ATTR serve para fazer a função rodar na RAM e volatile para assegurar o valor da variável caso utilize interrupções muito rápidas;</p>
 <p>-Se utilizar dos pinos D0 a D7 ligar o pino a um resistor(de preferência com uma resistencia alta, como 10kOhms), o resistor ligar no terra e sua interrupção ligar no ponto pino-resistor, pois os pinos quando setados como INPUT_PULLUP e digitalPinToInterrupt() ficam em nivel alto o tempo todo;</p>
+
+
+##### Funcionamento
+
+<p>Ao declarar um objeto da classe Quadrantes deve-se colocar no construtor os seguintes dados: pino para led, pino para interrupção e tempo que o quadrante permanece aceso.</p>
+<p>Toda vez que um objeto interrompem o sinal do infravermelho ocorre um pico de tensão, o NodeMCU lê esse pico de tensão, aciona o quadrante relacionado a esse infravermelho e registra o tempo de interrupção. A partir desse tempo de interrupção entre quadrantes e da distância constante entre eles é calculada a velocidade do objeto.</p>
+<p>No QT e no site é possível conferir seus tempos de permanência em nivel alto como também alterá-los. também pode ser visualizado suas velocidades durante o percurso.</p>
 
 
 
