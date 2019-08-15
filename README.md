@@ -37,6 +37,10 @@ Para estabelecer a conexão é necessário que os passos anteriores estejam corr
 -protoboard
 - 6 resistores de 220, 3 de 1k e 3 de 10k
 
+###### Circuito
+
+![circuito](figuras/circuito.jpeg)
+
 
 
 
