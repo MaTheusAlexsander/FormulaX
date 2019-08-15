@@ -16,6 +16,10 @@ Na interface no Qt podemos manipular as funções do programa. Primeiramente, é
 
 ![QT_PORTA](figuras/porta_qt.png)
 
+Após configuramos a porta serial COM3, se faz necessário escolher a velocidade de comunicação, que por padrão, deverá ser escolhida 115200.
+
+![QT_VELOCIDADE](figuras/velocidade_qt.png)
+
 
 
 #### Interface na Web
