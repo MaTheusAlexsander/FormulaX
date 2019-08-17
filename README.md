@@ -1,5 +1,9 @@
 # FormulaX
 
+  ##### Trabalho realizado por:
+  ###### Matheus Alexsander de Jesus Nogueira Rodrigues (20182610006)
+  ###### Mickael Yoshua Cardoso Reis                    (20182610010)
+
 <p align="center">
   <img src="figuras/logo.jpg?raw=true" alt="logo"/>
 </p>
@@ -16,6 +20,7 @@
 - [Informações Técnicas](#informa%C3%A7%C3%B5es-t%C3%A9cnicas)
 - [Materiais](#materiais)
 - [Circuito](#circuito)
+- [Resultados](#resultados)
 
 ## Objetivo
 <p>O FormulaX é um sistema de monitoriamento da performance com iluminação inteligente. Nesse protópio o usuário poderá analisar a sua perfomace através da análise dos dados gerados a partir de sensor de infravermelho.</p>
@@ -90,7 +95,10 @@ O [site](https://formulax.herokuapp.com) do FormulaX permite que o usuário tenh
 Em nosso trabalho necessitamos do uso de uma lógica que segrasse o sinal do led por um tempo e depois liberasse mas sem fazer o resto do programa parar. Com isso em mente foi desenvolvido uma logica utilizando a função millis().
 Primeiro é salvo o tempo no momento que ocorreu a interrupção no sensor, em seguida é feita a contagem do tempo logo após salvar o valor nesse momento e quando a diferença de tempo entre o tempo salvo e o tempo decorrido for igual ou maior que o tempo definido para o led permanecer aceso ele apaga. Assim podemos executar exatamente uma aplicação da função delay() sem fazer o programa parar.
 
+#### Resultados
 
-
+- Circuito funcionou, junto com seu código;
+- QT apenas envia JSON com problema na leitura do mesmo;
+- Servidor Web lê o JSON e mostra s dados com problema no envio do mesmo.
 
 
