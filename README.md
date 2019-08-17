@@ -52,7 +52,7 @@ Pronto! Após estabelecermos a comunicação, o usuário pode definir o tempo qu
 
 O [site](https://formulax.herokuapp.com) do FormulaX permite que o usuário tenha acesso ao sistema de monitoramente, necessitando apenas de uma conexão com a web. Esta página web está hospedada no Heroku, uma plataforma cloud que permite o deploy de aplicações para desenvolvedores. 
 
-![site](figuras/site.jpeg)
+![site](figuras/site.png)
 
 ## Informações Técnicas
 
@@ -84,6 +84,11 @@ O [site](https://formulax.herokuapp.com) do FormulaX permite que o usuário tenh
 <p>Ao declarar um objeto da classe Quadrantes deve-se colocar no construtor os seguintes dados: pino para led, pino para interrupção e tempo que o quadrante permanece aceso.</p>
 <p>Toda vez que um objeto interrompem o sinal do infravermelho ocorre um pico de tensão, o NodeMCU lê esse pico de tensão, aciona o quadrante relacionado a esse infravermelho e registra o tempo de interrupção. A partir desse tempo de interrupção entre quadrantes e da distância constante entre eles é calculada a velocidade do objeto.</p>
 <p>No QT e no site é possível conferir seus tempos de permanência em nivel alto como também alterá-los. também pode ser visualizado suas velocidades durante o percurso.</p>
+
+###### Timing com a função millis()
+
+Em nosso trabalho necessitamos do uso de uma lógica que segrasse o sinal do led por um tempo e depois liberasse mas sem fazer o resto do programa parar. Com isso em mente foi desenvolvido uma logica utilizando a função millis().
+Primeiro é salvo o tempo no momento que ocorreu a interrupção no sensor, em seguida é feita a contagem do tempo logo após salvar o valor nesse momento e quando a diferença de tempo entre o tempo salvo e o tempo decorrido for igual ou maior que o tempo definido para o led permanecer aceso ele apaga. Assim podemos executar exatamente uma aplicação da função delay() sem fazer o programa parar.
 
 
 
